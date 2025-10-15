@@ -1,0 +1,19 @@
+# workflow name
+name: basic workflow
+
+# EVENT TRIGGER
+on: [push]
+
+# JOBS
+jobs:
+    # Job-Name
+    first_job:
+        runs-on: ubuntu-latest
+        # STEPS
+        steps:
+        - name: Welcome Message
+          run: echo "First GitHub Actions Job"
+        - name: List Files
+          run : ls
+        - name: Read File
+          run: cat README.md
